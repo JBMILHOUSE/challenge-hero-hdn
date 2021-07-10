@@ -1,0 +1,17 @@
+import { Request, Response } from "express";
+import { CreatePowerService } from "../service/CreatePowerService";
+
+class CreatePowerController {
+  async handle(request: Request, response: Response){
+    const { name } = request.body;
+
+    const createPowerService = new CreatePowerService();
+    
+    const power = await createPowerService.execute(name);
+
+    return response.json(power);
+    
+  }
+}
+
+export { CreatePowerController };

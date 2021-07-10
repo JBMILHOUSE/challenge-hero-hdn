@@ -9,7 +9,7 @@ export class CreatePowers1625866706899 implements MigrationInterface {
             columns: [
                 {
                     name: "id",
-                    type: "number",
+                    type: "uuid",
                     isPrimary: true,
                 },
                 {
