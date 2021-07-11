@@ -10,41 +10,27 @@ export class CreateHeroes1625884038441 implements MigrationInterface {
                 {
                     name: "id",
                     type: "uuid",
-                    isPrimary: true,
+                    isPrimary: true
                 },
                 {
                     name: "name",
-                    type: "varchar",
+                    type: "varchar"
                 },
                 {
                     name: "description",
-                    type: "varchar",
-                },
-                {
-                    name: "powers_id",
-                    type: "uuid"
+                    type: "varchar"
                 },
                 {
                     name: "created_at",
                     type: "timestamp",
-                    default: "now()",
+                    default: "now()"
                 },
                 {
                     name: "updated_at",
                     type: "timestamp",
-                    default: "now()",
+                    default: "now()"
                 },     
-             ],
-             foreignKeys: [
-                {
-                    name: "FKPower",
-                    referencedTableName: "powers",
-                    referencedColumnNames: ["id"],
-                    columnNames: ["powers_id"],
-                    onDelete: "SET NULL",
-                    onUpdate: "SET NULL"
-                }
-            ]
+             ]
         }) 
     )
     }

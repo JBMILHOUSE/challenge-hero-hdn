@@ -1,15 +1,13 @@
-import { Request, response, Response } from "express";
-import { CreateHeroService } from "../service/CreateHeroService";
+import { Request, Response } from "express";
+import { CreateHeroService } from "../services/CreateHeroService";
 
 class CreateHeroController {
-  async handle(request: Request, Response: Response){
-
+  async handle(request: Request, response: Response){
     const { name, description } = request.body;
-    const { power_id } = request;
 
     const createHeroService = new CreateHeroService();
 
-    const hero = await createHeroService.execute({ name, description, powers_id: power_id });
+    const hero = await createHeroService.execute({ name, description });
 
     return response.json(hero);
   }

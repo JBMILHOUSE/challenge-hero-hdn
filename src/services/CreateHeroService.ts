@@ -4,20 +4,19 @@ import { HeroesRepositories } from "../repositories/HeroesRepositories";
 interface IHeroRequest {
   name: string;
   description: string;
-  powers_id: string;
 }
 
 class CreateHeroService {
-  async execute({ name, description, powers_id }: IHeroRequest){
+  async execute({ name, description }: IHeroRequest){
     const heroesRepositories = getCustomRepository(HeroesRepositories);
 
-    const nameAlreadyExists = await heroesRepositories.findOne({ name });
+    const heroAlreadyExists = await heroesRepositories.findOne({ name });
 
-    if(nameAlreadyExists){
-      throw new Error("Name already exists");
+    if(heroAlreadyExists){
+      throw new Error("Hero already exists");
     }
 
-    const hero = heroesRepositories.create({ name, description, powers_id });
+    const hero = heroesRepositories.create({ name, description });
 
     await heroesRepositories.save(hero);
 

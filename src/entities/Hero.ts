@@ -1,6 +1,5 @@
-import { PrimaryColumn ,Column, CreateDateColumn, Entity, UpdateDateColumn, JoinColumn, ManyToOne } from "typeorm";
+import { PrimaryColumn, Column, CreateDateColumn, Entity, UpdateDateColumn, JoinColumn, ManyToOne } from "typeorm";
 import { v4 as uuid } from "uuid";
-import { Power } from "./Power";
 
 @Entity("heroes")
 class Hero {
@@ -13,13 +12,6 @@ class Hero {
 
   @Column()
   description: string;
-
-  @Column()
-  powers_id: string;
-
-  @JoinColumn({ name: "powers_id" })
-  @ManyToOne(() => Power)
-  powersId: Power;
 
   @CreateDateColumn()
   created_at: Date;

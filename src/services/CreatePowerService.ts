@@ -5,7 +5,6 @@ class CreatePowerService {
   async execute(name: string){
     const powersRepositories = getCustomRepository(PowersRepositories); 
 
-    // verificando poder já existente
     const powerAlreadyExists = await powersRepositories.findOne({ name });
 
     if(powerAlreadyExists){

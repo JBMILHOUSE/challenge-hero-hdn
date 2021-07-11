@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreatePowerService } from "../service/CreatePowerService";
+import { CreatePowerService } from "../services/CreatePowerService";
 
 class CreatePowerController {
   async handle(request: Request, response: Response){
