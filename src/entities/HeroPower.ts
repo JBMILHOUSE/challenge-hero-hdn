@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, PrimaryColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, PrimaryColumn, ManyToOne } from "typeorm";
 import { v4 as uuid } from "uuid";
 import { Hero } from "./Hero";
 import { Power } from "./Power";
@@ -13,14 +13,14 @@ class HeroPower {
   hero_id: string;
 
   @JoinColumn({name: "hero_id"})
-  @ManyToMany(() => Hero)
+  @ManyToOne(() => Hero)
   hero: Hero; 
 
   @Column()
   power_id: string;
 
   @JoinColumn({name: "power_id"})
-  @ManyToMany(() => Power)
+  @ManyToOne(() => Power)
   power: Power;
 
   @CreateDateColumn()

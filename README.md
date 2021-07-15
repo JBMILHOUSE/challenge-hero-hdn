@@ -15,7 +15,7 @@
 
  [ x ] Cadastrar power
  [ x ] Não permitir que cadastre o mesmo nome
- [ ] Filtrar heroes por power
+ [ x ] Filtrar heroes por power
 
 
 
