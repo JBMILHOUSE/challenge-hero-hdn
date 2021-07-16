@@ -1,5 +1,6 @@
 import { getCustomRepository } from "typeorm";
 import { HeroesRepositories } from "../repositories/HeroesRepositories";
+import { Hero } from "../entities/Hero";
 
 class DeleteHeroService {
  async execute(id: string){
@@ -11,9 +12,8 @@ class DeleteHeroService {
      throw new Error("Hero don't existing");
    }
 
-   const hero = await heroRepositories.delete(id);
+   const hero = await heroRepositories.createQueryBuilder().delete().from(Hero).where("id = :id", { id }).execute();
 
-   console.log(hero)
    return hero;
  }
 }

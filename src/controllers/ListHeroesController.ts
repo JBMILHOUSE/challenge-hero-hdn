@@ -18,6 +18,8 @@ class ListHeroesController {
 
     const hero = await deleteHeroService.execute(id);
 
+    console.log(hero)
+
     return response.json(hero);
   }
 }

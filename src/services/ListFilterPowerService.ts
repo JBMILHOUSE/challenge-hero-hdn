@@ -1,6 +1,5 @@
 import { getCustomRepository } from "typeorm";
 import { HeroPowerRepositories } from "../repositories/HeroPowerRepositories";
-import { PowersRepositories } from "../repositories/PowersRepositories";
 
 class ListFilterPowerService {
   async execute(id: string){
@@ -8,6 +7,7 @@ class ListFilterPowerService {
 
     const filterPower = await heroPowerRepositories.find({
       where: { power_id: id },
+      relations: ["power", "hero"]
     });
 
     return filterPower;
