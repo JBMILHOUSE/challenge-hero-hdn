@@ -3,11 +3,12 @@
 Minha implementação do desafio proposto pela [HDN Digital](http://hdn.digital/), é um catalógo de heróis desenvolvido nas tecnologias relacionadas abaixo.
 
 ## :rocket: Tecnologias
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-[Node](https://nodejs.org/en/)
-[Typescript](https://www.typescriptlang.org/)
-[TypeORM](https://typeorm.io/#/)
-[Express](https://expressjs.com/pt-br/)
+- [Node](https://nodejs.org/en/)
+- [Typescript](https://www.typescriptlang.org/)
+- [TypeORM](https://typeorm.io/#/)
+- [Express](https://expressjs.com/pt-br/)
 
 ## :bookmark: Regras
 
