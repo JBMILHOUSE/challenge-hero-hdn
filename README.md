@@ -25,18 +25,19 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :pushpin: Rotas
 #### POST
-``/heroes`` Rota para criar um novo hero.
-``/powers`` Rota para criar novo poder.
-``/add/powers`` Rota para adicionar poder ao hero.
+- ``/heroes`` Rota para criar um novo hero.
+- ``/powers`` Rota para criar novo poder.
+-``/add/powers`` Rota para adicionar poder ao hero.
 
 #### GET
-``/heroes`` Rota listar todos os heróis.
-``/powers/:id`` Rota para listar heróis com poder espeficíco.
+-``/heroes`` Rota listar todos os heróis.
+-``/powers/:id`` Rota para listar heróis com poder espeficíco.
+
 #### PUT
-``/heroes/:id`` Rota para alterar informação do herói.
+-``/heroes/:id`` Rota para alterar informação do herói.
 
 #### DELETE
-``/hero/:id`` Rota para deletar herói.
+-``/hero/:id`` Rota para deletar herói.
 
 ## :fire: Como usar
 ```
