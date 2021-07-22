@@ -1,4 +1,4 @@
-import { PrimaryColumn, Column, CreateDateColumn, Entity, UpdateDateColumn, JoinColumn, ManyToOne } from "typeorm";
+import { PrimaryColumn, Column, CreateDateColumn, Entity, UpdateDateColumn, } from "typeorm";
 import { v4 as uuid } from "uuid";
 
 @Entity("heroes")

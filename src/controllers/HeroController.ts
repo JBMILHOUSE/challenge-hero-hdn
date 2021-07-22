@@ -9,19 +9,25 @@ class HeroController {
 
     const updateHeroService = new UpdateHeroService();
 
-    const updateHero = await updateHeroService.execute(id, description);
+    await updateHeroService.execute(id, description);
 
-     return response.json(updateHero);
+    return response.json({message: "change was successful"});
   }
-
+  
+  // funcionalidade não funciona
   async delete(request: Request, response: Response){
     const { id } = request.params;
 
-    const deleteHeroService = new DeleteHeroService();
+    try {
+      const deleteHeroService = new DeleteHeroService();
 
-    const hero = await deleteHeroService.execute(id);
+      await deleteHeroService.execute(id);
 
-    return response.json(hero);
+      return response.json({ message: "hero successfully deleted" });
+    } catch (error) {
+      return response.json(error);
+    }
+    
   }
 }
 

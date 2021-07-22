@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { ListFilterPowerService } from "../services/ListFilterPowerService";
 
 class ListFilterPowerController {
-  async handle(request: Request, response: Response){
+  async listFilter(request: Request, response: Response){
     const id = request.params.id;
 
     const listFilterPowerService = new ListFilterPowerService();

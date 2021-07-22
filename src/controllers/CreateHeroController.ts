@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { CreateHeroService } from "../services/CreateHeroService";
 
 class CreateHeroController {
-  async handle(request: Request, response: Response){
+  async create(request: Request, response: Response){
     const { name, description } = request.body;
 
     const createHeroService = new CreateHeroService();

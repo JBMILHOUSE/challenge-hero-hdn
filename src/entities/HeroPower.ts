@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, PrimaryColumn, ManyToOne } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, PrimaryColumn, ManyToOne } from "typeorm";
 import { v4 as uuid } from "uuid";
 import { Hero } from "./Hero";
 import { Power } from "./Power";
@@ -13,7 +13,7 @@ class HeroPower {
   hero_id: string;
 
   @JoinColumn({name: "hero_id"})
-  @ManyToOne(() => Hero)
+  @ManyToOne(() => Hero, { cascade: true, onDelete: "CASCADE"})
   hero: Hero; 
 
   @Column()

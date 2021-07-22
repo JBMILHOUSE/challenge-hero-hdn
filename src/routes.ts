@@ -16,12 +16,12 @@ const listHeroesController = new ListHeroesController();
 const listPowerController = new ListFilterPowerController();
 const heroController = new HeroController();
 
-router.post("/powers", createPowerController.handle);
-router.post("/heroes", createHeroController.handle);
-router.post("/addPower", createHeroPowerController.handle);
+router.post("/powers", createPowerController.create);
+router.post("/heroes", createHeroController.create);
+router.post("/add/Power", createHeroPowerController.create);
 
-router.get("/heroes", listHeroesController.handle);
-router.get("/powers/:id", listPowerController.handle);
+router.get("/heroes", listHeroesController.listTodo);
+router.get("/powers/:id", listPowerController.listFilter);
 
 router.put("/heroes/:id", heroController.update);
 router.delete("/heroes/:id", heroController.delete);

@@ -1,9 +1,8 @@
 import { Request, Response } from "express";
 import { ListHeroesService } from "../services/ListHeroesService";
-import { DeleteHeroService } from "../services/DeleteHeroService";
 
 class ListHeroesController {
-  async handle(request: Request, response: Response){
+  async listTodo(request: Request, response: Response){
     const listHeroesService = new ListHeroesService();
 
     const heroes = await listHeroesService.execute();
@@ -11,17 +10,6 @@ class ListHeroesController {
     return response.json(heroes);
   }
 
-  async delete(request: Request, response: Response){
-    const id = request.params.id;
-
-    const deleteHeroService = new DeleteHeroService();
-
-    const hero = await deleteHeroService.execute(id);
-
-    console.log(hero)
-
-    return response.json(hero);
-  }
 }
 
 export { ListHeroesController };

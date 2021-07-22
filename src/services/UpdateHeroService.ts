@@ -1,5 +1,4 @@
 import { getCustomRepository } from "typeorm";
-import { Hero } from "../entities/Hero";
 import { HeroesRepositories } from "../repositories/HeroesRepositories";
 
 class UpdateHeroService {
@@ -12,13 +11,9 @@ class UpdateHeroService {
       throw new Error("Hero does not exists!");
     }
 
-    return await heroesRepositories
-            .createQueryBuilder()
-            .update(Hero)
-            .set({ description })
-            .where("id = :id", { id, }).execute();
+    const hero = await heroesRepositories.update(id, { description });
     
-    
+    return hero;
   }
 }
 
