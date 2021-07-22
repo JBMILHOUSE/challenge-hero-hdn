@@ -18,12 +18,12 @@ const heroController = new HeroController();
 
 router.post("/powers", createPowerController.create);
 router.post("/heroes", createHeroController.create);
-router.post("/add/Power", createHeroPowerController.create);
+router.post("/add/powers", createHeroPowerController.create);
 
 router.get("/heroes", listHeroesController.listTodo);
 router.get("/powers/:id", listPowerController.listFilter);
 
 router.put("/heroes/:id", heroController.update);
-router.delete("/heroes/:id", heroController.delete);
+router.delete("/hero/:id", heroController.delete);
 
 export { router };

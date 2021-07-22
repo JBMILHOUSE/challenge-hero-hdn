@@ -22,6 +22,22 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
  - [x] Não permitir que cadastre o mesmo nome de poder
  - [x] Filtrar heroes por power
 
+
+## :pushpin: Rotas
+#### POST
+``/heroes`` Rota para criar um novo hero.
+``/powers`` Rota para criar novo poder.
+``/add/powers`` Rota para adicionar poder ao hero.
+
+#### GET
+``/heroes`` Rota listar todos os heróis.
+``/powers/:id`` Rota para listar heróis com poder espeficíco.
+#### PUT
+``/heroes/:id`` Rota para alterar informação do herói.
+
+#### DELETE
+``/hero/:id`` Rota para deletar herói.
+
 ## :fire: Como usar
 ```
 # Clone este repositório
