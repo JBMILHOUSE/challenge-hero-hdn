@@ -63,5 +63,5 @@ Por fim, a aplicação estará disponível em ``` localhost:3333 ```
 This project has the MIT license. See the archive [LICENSE](LICENSE.md) for more details.
 
 <h4 align="center">
-    Made with 💜 by <a href="https://www.linkedin.com/in/christopher-alexandre-a477b6170/" target="_blank">Chris</a>
+    Made with 💜 by <a href="https://br.linkedin.com/in/chris-oliveira-alexandre/" target="_blank">Chris</a>
 </h4>
